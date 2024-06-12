@@ -1,0 +1,29 @@
+---
+import { TypeFormatFlags } from "typescript"
+
+const PROJECTS = [
+    {
+    title:'',
+    description:'',
+    link:'',
+    github:'',
+    image:'',
+    tags:['HTML','CSS','JavaScript']
+    }
+]
+---
+
+{
+    PROJECTS.map(({title,description,tags,image}) => (
+        <article>
+            <h3></h3>
+            <p></p>
+            <ul>
+                {tags.map(tag => (
+                    <li>{tag}</li>
+                ))}
+            </ul>
+            <img src={image} alt={`Captura de pantalla del proyecto ${image}`}/>
+        </article>
+    ))
+}
