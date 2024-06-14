@@ -1,76 +1,49 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
-import Badge from "../components/Badge.astro";
-import LinkedIn from "../components/icons/LinkedIn.astro";
-import Github from "../components/icons/Github.astro";
-import Mail from "../components/icons/Mail.astro";
-import Social from "../components/Social.astro";
 import Experience from "../components/Experience.astro";
 import Section from "../components/SectionContainer.astro";
 import Briefcase from "../components/icons/Briefcase.astro";
 import Projects from "../components/Projects.astro";
 import Code from "../components/icons/Code.astro";
+import Profile from "../components/profile.astro";
+import Courses from "../components/Courses.astro";
+import Certificate from "../components/icons/Certificate.astro";
 ---
 
-<Layout title="Portfolio de Richard Vidal - Desarrollador y Programador Web con 2 años de experiencia "
-description="Conoce el Potencial de Richard">
-<main class="px-4">
-    <Section class="py-44 pb-32">
-    <img
-      class="rounded-full size-12 mb-4"
-      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHqd6k5M9VxUXMNtifPb2ojdHDVOceEmXRtA&s"
-      alt="dev-photo"
-    />
+<Layout
+  title="Portfolio de Richard Vidal - Desarrollador y Programador Web con 2 años de experiencia "
+  description="Contrata a Richard como Python Developer :D"
+>
+  <main class="px-4">
+    <Section class="py-16 md:py-36">
+      <Profile>
+        <slot />
+      </Profile>
+    </Section>
+    <div class="space-y-24">
+      <Section id="experiencia">
+        <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
+          <Briefcase class="size-7" />
+          Experiencia Laboral
+        </h2>
+        <Experience />
+      </Section>
 
-      <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
-        Hola, soy Richard Vidal
-        <a
-          href="https://www.linkedin.com/in/richard-vidal-appsec/"
-          target="_blank"
-          rel="noopener"
-          class="flex justify-center items-center"
-        >
-          <Badge>Disponible para Trabajar!</Badge>
-        </a>
-      </h1>
-      <h2 class="text-xl lg:text-2xl text-pretty max-w-[500px]">
-        <span> +2 años de experiencia. </span>
-        <span class="text-yellow-200/90"> Bachiller en Ingenieria de Sistemas.</span>
-        <span class="text-red-200/90"> De Lima, Peru. </span>
-        <span class="opacity-85">
-          Especializado en crear aplicaciones unicas
-        </span>
-      </h2>
-          <nav class="flex gap-4 mt-8 flex-wrap" >
-            <Social href="https://www.linkedin.com/in/richard-vidal-appsec/">
-				<LinkedIn class="size-4 md:size-6"/>
-				LinkedIn 
-			</Social>
-			<Social href="https://github.com/RvidalSt4rtend/">
-				<Github class="size-4 md:size-6"/>
-				Github 
-			</Social>
-			<Social href="mailto:rvidal@st4rtend.com">
-				<Mail class="size-4 md:size-6"/>
-				rvidal@st4rtend.com
-			</Social>
-          </nav>
-        </Section>
-         
-        <Section id="experiencia">
-          <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
-            <Briefcase class="size-7"/>
-            Experiencia Laboral</h2>
-          <Experience/>
-        </Section>
+      <Section id="proyectos">
+        <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
+          <Code class="size-7" />
+          Proyectos
+        </h2>
+        <Projects />
+      </Section>
 
-        <Section id="experiencia">
-          <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
-            <Code class="size-7"/>
-            Proyectos</h2>
-          <Projects/>
-        </Section>
-    </main>
-  
+      <Section id="cursos">
+        <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
+          <Certificate class="size-7" />
+          Cursos
+        </h2>
+        <Courses />
+      </Section>
+    </div>
+  </main>
 </Layout>
