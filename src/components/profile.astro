@@ -4,6 +4,7 @@ import Badge from "../components/Badge.astro"
 import LinkedInIcon from "../components/icons/LinkedIn.astro"
 import MailIcon from "../components/icons/Mail.astro"
 import SocialPill from "../components/Social.astro"
+import Github from "./icons/Github.astro"
 ---
 
 <div class="max-w-xl">
@@ -28,10 +29,9 @@ import SocialPill from "../components/Social.astro"
     Hola, soy Richard Vidal
   </h1>
   <p
-    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-400 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
-  >
-    +2 años de experiencia. <strong>Bachiller en Ingenieria de Sistemas </strong
-    > de Lima, Peru 🇵🇪. Apasionado por el Desarrollo de Aplicaciones Web y la Ciberseguridad.
+    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-400 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300 text-pretty">
+     <strong>Bachiller en Ingenieria de Sistemas </strong
+    >, <b>+2 años de experiencia</b>  Apasionado por el Desarrollo de Aplicaciones Web y la Ciberseguridad. Lima, Peru 🇵🇪
   </p>
   <nav class="flex flex-wrap gap-4 mt-8">
     <SocialPill href="mailto:rvidal@st4rtend.com">
@@ -41,6 +41,10 @@ import SocialPill from "../components/Social.astro"
     <SocialPill href="https://www.linkedin.com/in/richard-vidal-appsec/">
       <LinkedInIcon class="size-4" />
       LinkedIn
+    </SocialPill>
+    <SocialPill href="https://github.com/RvidalSt4rtend">
+      <Github class="size-4" />
+      Github
     </SocialPill>
   </nav>
 </div>

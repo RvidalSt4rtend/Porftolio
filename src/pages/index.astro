@@ -8,6 +8,8 @@ import Code from "../components/icons/Code.astro";
 import Profile from "../components/profile.astro";
 import Courses from "../components/Courses.astro";
 import Certificate from "../components/icons/Certificate.astro";
+import AboutMe from "../components/AboutMe.astro";
+import Me from "../components/icons/Me.astro";
 ---
 
 <Layout
@@ -43,6 +45,13 @@ import Certificate from "../components/icons/Certificate.astro";
           Cursos
         </h2>
         <Courses />
+      </Section>
+      <Section id="sobre-mi">
+        <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
+          <Me class="size-7" />
+          Sobre mi
+        </h2>
+        <AboutMe />
       </Section>
     </div>
   </main>
