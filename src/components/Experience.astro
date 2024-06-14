@@ -1,29 +1,31 @@
 ---
-const EXPERIENCE=[
+const EXPERIENCE = [
     {
         title: "Analista de Procesos y Proyectos",
         date: "Abr 2023 – Abr 2024",
-        company:"IDEGO STANDARD",
-        description: 'Desarr',
-        link: "#",
+        company: "IDEGO STANDARD",
+        description: `  Responsable de la implementación, supervision y seguimiento de proyectos de automatización de procesos con RPA Rocketbot.
+                        Participe en el desarrollo de sistemas utilizando las tecnologias de Django y Nodejs.
+                        Participe en la elaboración de documentación técnica y funcional para proyectos de automatización de procesos y desarrollo de sistemas.`,
     },
     {
         title: "Practicante Pre-profesional",
         date: "Nov 2022 - Abr 2023",
-        company:"IDEGO STANDARD",
-        description: "Responsable del desarrollo de RPA utilizando Rocketbot en distintos giros de negocio",
+        company: "IDEGO STANDARD",
+        description: `Desarrolle RPA utilizando Rocketbot para diversos tipos de procesos.
+                      Desarrollé aplicaciones web utilizando Django.
+                      Elaboré documentación técnica y funcional para proyectos RPA y desarrollo web.`,
     },
- 
-    ];
+];
 import ExperienceItem from "./ExperienceItem.astro";
 ---
 
 <ol class="relative border-s border-gray-200 ml-2">
     {
-        EXPERIENCE.map(experience => (
-        <li class="mb-10 ms-4">
-        <ExperienceItem {...experience} />
-        </li>))
+        EXPERIENCE.map((experience) => (
+            <li class="mb-10 ms-4">
+                <ExperienceItem {...experience} />
+            </li>
+        ))
     }
-  
 </ol>
