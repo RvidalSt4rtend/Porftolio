@@ -1,6 +1,7 @@
 ---
 import Django from "../components/icons/Django.astro";
 import Azure from "../components/icons/Azure.astro";
+import Python from "../components/icons/Python.astro";
 import Javascript from "../components/icons/Javascript.astro";
 import Github from "../components/icons/Github.astro";
 import Link from "../components/icons/Link.astro";
@@ -22,6 +23,11 @@ const TAGS = {
         class: "bg-[#04529b] text-white",
         icon: Azure,
     },
+    PYTHON: {
+        name: "Python",
+        class: "bg-[#f7e025] text-black",
+        icon: Python,
+    },
 };
 
 const PROJECTS = [
@@ -32,6 +38,13 @@ const PROJECTS = [
         github: "https://github.com/RvidalSt4rtend/Password-Generator.git",
         image: "/projects/pm.webp",
         tags: [TAGS.DJANGO, TAGS.JAVASCRIPT, TAGS.AZURE],
+    },
+    {
+        title: "Python Scripts",
+        description: "Script en Python para automatizar diversas tareas en el sistema operativo Windows y Linux",
+        github: "https://github.com/RvidalSt4rtend/Python-Scripts",
+        image: "/projects/pythonScripts.webp",
+        tags: [TAGS.PYTHON],
     },
 ];
 ---
