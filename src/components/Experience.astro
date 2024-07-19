@@ -1,31 +1,35 @@
 ---
 const EXPERIENCE = [
-    {
-        title: "Analista Programador",
-        date: "Abr 2023 – Abr 2024",
-        company: "IDEGO STANDARD",
-        description: `  Responsable de la implementación, supervision y seguimiento de proyectos de automatización de procesos con RPA Rocketbot.
-                        Participe en el desarrollo de sistemas utilizando las tecnologias de Django y Nodejs.
-                        Participe en la elaboración de documentación técnica y funcional para proyectos de automatización de procesos y desarrollo de sistemas.`,
-    },
-    {
-        title: "Practicante Pre-profesional",
-        date: "Nov 2022 - Abr 2023",
-        company: "IDEGO STANDARD",
-        description: `Desarrolle RPA utilizando Rocketbot para diversos tipos de procesos.
-                      Desarrollé aplicaciones web utilizando Django.
-                      Elaboré documentación técnica y funcional para proyectos RPA y desarrollo web.`,
-    },
+  {
+    title: "Analista Programador",
+    date: "Abr 2023 – Abr 2024",
+    company: "IDEGO STANDARD",
+    description: `  Desarrollé colaborativamente un sistema web RESTful para un proceso aduanero, facilitando la comunicación interdepartamental y acelerando la entrega de productos.
+                        Lideré la implementación, supervisión y seguimiento de proyectos de automatización de procesos con RPA Rocketbot, aplicados en finanzas, tesorería y web scraping, optimizando así la eficiencia operativa
+                        Desarrollé sistemas web para gestionar información, variables, credenciales y visualizar los registros de operación de los RPA implementados mejorando el control del proceso de automatización.
+                        Supervisé métricas de rendimiento y consumo de servicios en Azure para optimizar la escalabilidad y reducir costos operativos.
+                        Implementé soluciones de Zero Trust y WAF en los desarrollos utilizando Cloudflare, mejorando así la ciberseguridad y asegurando la integridad de los sistemas.
+                        Implementé prácticas de CI/CD para mejorar la eficiencia en la entrega de software, reduciendo errores y tiempos de entrega bajando los tiempos de despliegue más de un 80%.
+                        Integré APIs de Sunat y de terceros en distintos proyectos para validar documentos de pago.`,
+  },
+  {
+    title: "Practicante Pre-profesional",
+    date: "Nov 2022 - Abr 2023",
+    company: "IDEGO STANDARD",
+    description: `Implementé soluciones RPA utilizando Rocketbot para automatizar diversos procesos de negocio.
+                      Diseñé modelos de documentación técnica y funcional para proyectos de RPA y desarrollo de sistemas web.
+                      Realicé pruebas funcionales en diversos sistemas web y en implementaciones de RPA.`,
+  },
 ];
 import ExperienceItem from "./ExperienceItem.astro";
 ---
 
 <ol class="relative border-s border-gray-200 ml-2">
-    {
-        EXPERIENCE.map((experience) => (
-            <li class="mb-10 ms-4">
-                <ExperienceItem {...experience} />
-            </li>
-        ))
-    }
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="mb-10 ms-4 text-pretty">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
 </ol>

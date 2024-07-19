@@ -6,6 +6,7 @@ import Javascript from "../components/icons/Javascript.astro";
 import Github from "../components/icons/Github.astro";
 import Link from "../components/icons/Link.astro";
 import LinkButton from "../components/LinkButton.astro";
+import Bash from "./icons/Bash.astro";
 
 const TAGS = {
     DJANGO: {
@@ -28,6 +29,11 @@ const TAGS = {
         class: "bg-[#f7e025] text-black",
         icon: Python,
     },
+    BASH: {
+        name: "Bash",
+        class: "bg-black text-white",
+        icon: Bash,
+    },
 };
 
 const PROJECTS = [
@@ -45,6 +51,13 @@ const PROJECTS = [
         github: "https://github.com/RvidalSt4rtend/Python-Scripts",
         image: "/projects/pythonScripts.webp",
         tags: [TAGS.PYTHON],
+    },
+    {
+        title: "CyberSecurity Scripts",
+        description: "Script en Python para automatizar diversas tareas en el sistema operativo Windows y Linux",
+        github: "https://github.com/RvidalSt4rtend/Cyber-Scripts",
+        image: "/projects/cyberScripts.webp",
+        tags: [TAGS.BASH, TAGS.PYTHON],
     },
 ];
 ---
