@@ -1,0 +1,122 @@
+<div class="grid gap-4">
+  <div id="featured" class="aspect-w-16 aspect-h-9">
+      <img class="object-cover w-full h-full rounded-lg" src="/projects/EH.webp" alt="">
+  </div>
+  <div id="thumbnails" class="grid grid-cols-6 gap-3">
+      <div class="aspect-w-1 aspect-h-1 thumbnail hover-zoom">
+          <img class="object-cover w-full h-full rounded-lg" src="/projects/CAPC.webp" alt="">
+      </div>
+      <div class="aspect-w-1 aspect-h-1 thumbnail hover-zoom">
+          <img class="object-cover w-full h-full rounded-lg" src="/projects/certiprof.webp" alt="">
+      </div>
+      <div class="aspect-w-1 aspect-h-1 thumbnail hover-zoom">
+          <img class="object-cover w-full h-full rounded-lg" src="/projects/scrum.webp" alt="">
+      </div>
+      <div class="aspect-w-1 aspect-h-1 thumbnail hover-zoom">
+          <img class="object-cover w-full h-full rounded-lg" src="/projects/rpa.webp" alt="">
+      </div>
+      <div class="aspect-w-1 aspect-h-1 thumbnail hover-zoom">
+          <img class="object-cover w-full h-full rounded-lg" src="/projects/english.webp" alt="">
+      </div>
+      <div class="aspect-w-1 aspect-h-1 thumbnail hover-zoom">
+        <img class="object-cover w-full h-full rounded-lg" src="/projects/CyberAnalyst.webp" alt="">
+      </div>
+  </div>
+</div>
+
+<script>
+  const featured = document.getElementById('featured');
+  const thumbnails = Array.from(document.querySelectorAll('#thumbnails .thumbnail'));
+  const images = [
+      "/projects/EH.webp",
+      "/projects/CAPC.webp",
+      "/projects/certiprof.webp",
+      "/projects/scrum.webp",
+      "/projects/rpa.webp",
+      "/projects/english.webp",
+      "/projects/CyberAnalyst.webp"
+  ];
+
+  let currentIndex = 0;
+
+  function updateImages() {
+    // Check if featured and thumbnails are available
+    if (!featured || thumbnails.length === 0) {
+      console.error('Featured or thumbnails not found');
+      return;
+    }
+
+    const featuredImg = featured.querySelector('img');
+    if (!featuredImg) {
+      console.error('No image found in featured');
+      return;
+    }
+
+    const nextIndex = (currentIndex + 1) % images.length;
+    const nextThumbnail = thumbnails[nextIndex];
+    if (!nextThumbnail) {
+      console.error('Next thumbnail not found');
+      return;
+    }
+
+    const oldThumbnailImg = nextThumbnail.querySelector('img');
+    if (!oldThumbnailImg) {
+      console.error('No image found in the next thumbnail');
+      return;
+    }
+
+
+    const newFeaturedImgSrc = images[nextIndex];
+
+
+    featuredImg.classList.add('fade-out');
+
+
+    setTimeout(() => {
+      featuredImg.src = newFeaturedImgSrc;
+      featuredImg.classList.remove('fade-out');
+      featuredImg.classList.add('fade-in');
+
+
+      oldThumbnailImg.src = images[currentIndex];
+
+
+      oldThumbnailImg.classList.add('fade-in');
+
+
+      currentIndex = nextIndex;
+    }, 500); 
+  }
+
+
+  if (typeof setInterval === 'function') {
+    setInterval(updateImages, 6000);
+  } else {
+    console.error('setInterval is not available');
+  }
+</script>
+
+
+<style>
+  .hover-zoom img {
+    transition: transform 0.3s ease-in-out, z-index 0.3s ease-in-out;
+    position: relative;
+  }
+  .hover-zoom:hover img {
+    transform: scale(2.1);
+    z-index: 10;
+  }
+
+  #featured img, #thumbnails .thumbnail img {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+
+  .fade-out {
+    opacity: 0;
+  }
+
+  .fade-in {
+    opacity: 1;
+  }
+</style>
+

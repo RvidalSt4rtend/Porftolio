@@ -10,6 +10,8 @@ import Courses from "../components/Courses.astro";
 import Certificate from "../components/icons/Certificate.astro";
 import AboutMe from "../components/AboutMe.astro";
 import Me from "../components/icons/Me.astro";
+import Certifications from "../components/Certifications.astro";
+import Course from "../components/icons/Course.astro";
 ---
 
 <Layout
@@ -24,7 +26,9 @@ import Me from "../components/icons/Me.astro";
     </Section>
     <div class="space-y-24">
       <Section id="experiencia">
-        <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
+        <h2
+          class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+        >
           <Briefcase class="size-7" />
           Experiencia Laboral
         </h2>
@@ -32,22 +36,36 @@ import Me from "../components/icons/Me.astro";
       </Section>
 
       <Section id="proyectos">
-        <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
+        <h2
+          class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+        >
           <Code class="size-7" />
           Proyectos
         </h2>
         <Projects />
       </Section>
-
-      <Section id="cursos">
-        <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
+      <Section id="certificados">
+        <h2
+          class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+        >
           <Certificate class="size-7" />
+          Certificados
+        </h2>
+        <Certifications />
+      </Section>
+      <Section id="cursos">
+        <h2
+          class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+        >
+          <Course class="size-7" />
           Cursos
         </h2>
         <Courses />
       </Section>
       <Section id="sobre-mi">
-        <h2 class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white">
+        <h2
+          class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+        >
           <Me class="size-7" />
           Sobre mi
         </h2>
